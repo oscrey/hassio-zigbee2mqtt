@@ -60,7 +60,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Docker login
       if: (github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')) && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-      run: export CR_PAT=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 ; echo $CR_PAT | docker login ghcr.io -u oscrey --password-stdin
+      run: export CR_PAT=Xe0ly6vmaCMLZnYAdPVhGM8mRr1wAA1TnnCe ; echo $CR_PAT | docker login ghcr.io -u oscrey --password-stdin
       
     - name: Build
       run: |
